@@ -95,5 +95,5 @@ detector-objetos-yolo/
 
 ## 👤 Autor
 
-**MAY** — Estudiante de Diseño y Desarrollo de Software en Tecsup
+**MAYELA TICONA** — Estudiante de Diseño y Desarrollo de Software en Tecsup
 [GitHub: @Mayela3018](https://github.com/Mayela3018)
