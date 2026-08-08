@@ -22,9 +22,28 @@ confianza = st.sidebar.slider("Confianza mínima de detección", 0.0, 1.0, 0.5, 
 st.sidebar.markdown("---")
 st.sidebar.markdown("**Clases detectables:** 80 objetos (personas, animales, vehículos, objetos cotidianos, etc.)")
 
-# Configuración RTC (necesaria para que funcione en la nube)
+# Configuración RTC (necesaria para que funcione en la nube) — con servidor TURN de Metered
 RTC_CONFIGURATION = RTCConfiguration(
-    {"iceServers": [{"urls": ["stun:stun.l.google.com:19302"]}]}
+    {
+        "iceServers": [
+            {"urls": ["stun:stun.relay.metered.ca:80"]},
+            {
+                "urls": ["turn:global.relay.metered.ca:80"],
+                "username": "0ab878564f80ba02cb3a24d5",
+                "credential": "Oo+6oxKHONEfEdj5",
+            },
+            {
+                "urls": ["turn:global.relay.metered.ca:443"],
+                "username": "0ab878564f80ba02cb3a24d5",
+                "credential": "Oo+6oxKHONEfEdj5",
+            },
+            {
+                "urls": ["turns:global.relay.metered.ca:443?transport=tcp"],
+                "username": "0ab878564f80ba02cb3a24d5",
+                "credential": "Oo+6oxKHONEfEdj5",
+            },
+        ]
+    }
 )
 
 # Diccionario de traducción de las 80 clases de COCO
@@ -78,8 +97,6 @@ webrtc_streamer(
 
 st.markdown("---")
 st.caption("Proyecto de portafolio — Detector de objetos con YOLOv8 y Streamlit")
-
-
 
 
 
