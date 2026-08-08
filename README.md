@@ -20,8 +20,7 @@ Aplicación web que detecta objetos en tiempo real usando la cámara del navegad
 
 ## 🚀 Demo
 
-🔗 **[Ver demo en vivo](#)** *(link pendiente de despliegue)*
-
+🔗 **[Ver demo en vivo](https://detector-objetos-yolo-74iz8qxrpsplgpkggbwzfc.streamlit.app/)**
 ![Demo del detector de objetos](#)
 *(agregar captura o GIF de la app funcionando)*
 
@@ -79,9 +78,13 @@ Se abrirá automáticamente en tu navegador en `http://localhost:8501`. Presiona
 ## 📁 Estructura del proyecto
 
 detector-objetos-yolo/
+|
 ├── app.py # Aplicación principal de Streamlit
+|
 ├── requirements.txt # Dependencias del proyecto
+|
 ├── .gitignore
+|
 └── README.md
 
 
